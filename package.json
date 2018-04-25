@@ -1,15 +1,17 @@
 {
-  "name": "artillery",
+  "name": "artillery-test",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "artillery run firstTest.yml -o firstTest.json",
-    "dv4all-test": "artillery run dv4all.yml -o dv4all.json",
-    "dv4all-report": "artillery report dv4all.json"
-
+    "test": "artillery run sample.yml -o sample.json",
+    "dv4all-test": "artillery run ./dv4all/dv4all.yml -o ./dv4all/dv4all.json",
+    "dv4all-report": "artillery report ./dv4all/dv4all.json"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "artillery": "^1.6.0-15"
+  }
 }

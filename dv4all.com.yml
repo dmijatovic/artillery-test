@@ -1,0 +1,24 @@
+
+config:
+  target: https://dv4all.com
+  phases:
+    - duration: 60
+      arrivalRate: 10
+      name: "Load 10 virtual users for 60 seconds"
+    - duration: 60
+      arrivalRate: 10
+      rampTo: 20
+      name: "Load from 10 to 20 virtual users for next 60 seconds"
+    - pause: 60
+      name: "Pause for 60 seconds"
+    - duration: 60
+      arrivalRate: 30
+      name: "Load 30 users for 60 seconds"
+scenarios:
+  - flow:
+    - get: 
+        url: "/"
+    - get: 
+        url: "/#/en/about"
+    - get: 
+        url: "/#/en/dashboard"

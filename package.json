@@ -1,0 +1,15 @@
+{
+  "name": "artillery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "artillery run firstTest.yml -o firstTest.json",
+    "dv4all-test": "artillery run dv4all.yml -o dv4all.json",
+    "dv4all-report": "artillery report dv4all.json"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
